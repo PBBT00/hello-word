@@ -1,0 +1,21 @@
+package 自制小工具1;
+//例如：汉字约有97046个，至少需要17位二进制数。
+
+import java.util.Scanner;
+public class 要表示n个不同的字符至少需要多少位二进制数 {
+	private static float sum=1;
+	public static void main(String[] args) {
+		System.out.println("请输入要表示的字符数n：");
+		float n=(new Scanner(System.in)).nextFloat();
+		int m=0;
+		while(true){ 
+			if(sum>=n) {
+				break;
+			}
+			sum*=2;
+			m+=1;
+		}
+		System.out.print("至少需要 "+m+" 位二进制数");
+	}
+
+}
