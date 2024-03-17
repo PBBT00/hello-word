@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main1);
         imageView = (ImageView) findViewById(R.id.imgView);
         tv = (TextView) findViewById(R.id.tv);
-        CountDownTimer countDownTimer = new CountDownTimer(5000, 1000) {
+        CountDownTimer countDownTimer = new CountDownTimer(10000, 2000) {
             int i = 1;
             @Override
             //每隔1秒就会调用onTick()方法一次

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/IndianRed2"
+        android:text="显示图片切换的倒计时的时间"
+        android:textSize="28sp"
+        android:textColor="@color/purple_700"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/img2"
+        android:layout_weight="8"
+        android:scaleType="fitXY">
+    </ImageView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="退出"
+        android:textSize="28sp"
+        android:layout_weight="1"/>
+</LinearLayout>
