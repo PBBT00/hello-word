@@ -1,0 +1,63 @@
+package Temp;
+
+import java.security.PublicKey;
+
+public class TimeCount extends Thread{
+
+	int h=13;
+	int m=26;
+	int s=50;
+	
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+
+		TimeCount timeCount=new TimeCount();
+		timeCount.start();
+	}
+	public void run() {
+		while (true) {
+			for (;h<24;) {
+				for (;m<60;) {
+					for (;s<60;) {
+						if (h<10||m<10||s<10) {
+							if (s<10&&m>=10&&h>=10) {
+								System.out.println("时间："+h+"时"+m+"分"+"0"+s+"秒");
+							}
+							else if (m<10&&s>=10&&h>=10) {
+								System.out.println("时间："+h+"时"+"0"+m+"分"+s+"秒");
+							}
+							else if (h<10&&s>=10&&m>=10) {
+								System.out.println("时间："+"0"+h+"时"+m+"分"+s+"秒");
+							}
+							else if (s<10&&m<10&&h>=10) {
+								System.out.println("时间："+h+"时"+"0"+m+"分"+"0"+s+"秒");
+							}
+							else if (s<10&&h<10&&m>=10) {
+								System.out.println("时间："+"0"+h+"时"+m+"分"+"0"+s+"秒");
+							}
+							else if (m<10&&h<10&&s>=10) {
+								System.out.println("时间："+"0"+h+"时"+"0"+m+"分"+s+"秒");
+							}
+							else if (s<10&&m<10&&h<10) {
+								System.out.println("时间："+"0"+h+"时"+"0"+m+"分"+"0"+s+"秒");
+							}
+						}
+						else System.out.println("时间："+h+"时"+m+"分"+s+"秒");
+						try {
+							sleep(1000);
+						} catch (Exception e) {
+							// TODO: handle exception
+						}
+						s++;
+					}
+					m++;
+					s=0;
+				}
+				h++;
+				m=0;
+			}
+			h=0;
+		}
+	}
+
+}
