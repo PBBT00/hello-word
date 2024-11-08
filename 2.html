@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="importmap">
+        {
+            "imports":{
+                "vue":"https://unpkg.com/vue/dist/vue.esm-browser.js"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <h4>一个参数</h4>
+        <p v-for="value in peom">{{value}}</p>
+        <h4>两个参数</h4>
+        <p v-for="(value,key) in peom">{{key}}:{{value}}</p>
+        <h4>三个参数</h4>
+        <p v-for="(value,key,index) in peom">{{index}}.{{key}}-{{value}}</p>
+    </div>
+    <script type="module">
+        import { createApp } from 'vue';
+        const app = createApp({
+            data(){
+                return{
+                    peom: {
+                        "title": "悯农",
+                        "author": "李绅",
+                        "body": "锄禾日当午，汗滴禾下土。谁知盘中餐，粒粒皆辛苦。"
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
