@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>v-for指令基于一个数字来渲染一个列表</title>
+    <script type="importmap">
+    {
+        "imports":{
+            "vue":"https://unpkg.com/vue/dist/vue.esm-browser.js"
+        }
+    }
+</script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="count in shu">第{{count}}列表项</li>
+        </ul>
+    </div>
+    <script type="module">
+        import { createApp } from "vue";
+        createApp({
+            setup() {
+                return {
+                    shu: 5
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
